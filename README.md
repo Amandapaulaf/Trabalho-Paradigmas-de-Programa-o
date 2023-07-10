@@ -1,4 +1,10 @@
 # Trabalho-Paradigmas-de-Programa-o
 Analisador léxico/sintático para expressões básicas na linguagem java.
-Para utilizar o analisador testando suas própias expressões o usuário deve alterar o caminho do arquivo txt presente no código para um arquivo do seu própio computador, após a escrita é necessário salvar as alterações no código para executá-lo.
-O caminho do arquivo está presente na main do projeto.
+
+O código apresentado é um programa Java que realiza análise léxica em um arquivo de entrada. Na classe "Main", está contido o método principal que é  a entrada do programa, nela é criado uma instância da classe "LexicalAnlyzer" e lê os tokens do arquivo de entrada até encontrar o fim do arquivo. Ademais, cada token encontrado é impresso na tela.
+
+Em seguida, temos a classe ' Token", que foi criada para representar um token do programa. Ela define uma enumeração a qual chamamos de "TokenType" para os os tipos possíveis de token, como número inteiros, parênteses, identificadores etc. Cada token possui um tipo e um valor(lexema). Para essa parte, optamos por utilizar o enum para representar os diferentes tipos de tokens ao invés de utilizar as expressões regulares apresentadas no livro texto apresentado em sala de aula, visto que a utilização do enum, para este caso em específico, é uma escolha mais adequada e torna o código mais legível, oferecendo uma estrutura organizada para agrupar e identificar os diferentes tipos de tokens. Além disso, a classe possui métodos para obter o tipo e o valor do token, além de um método "toString()" para imprimir o token.
+
+Por conseguinte, temos a classe "LexicalAnalyzer", essa classe é responsável pela análise léxica do programa. Ela lê o arquivo de entrada e retorna os tokens para o programa principal. Ela também possui métodos para ler o próximo caractere do arquivo, adicionar caracteres ao lexema atual, ignorar os tokens e possui um mapa de palavras reservadas, onde associa as palavras reservadas aos seus respectivos tokens. Para essa parte de palavras reservadas, optamos por implementar apenas duas ( IF e ELSE). Além disso, a classe implementa métodos para analisar  expressões "expr()", "term()", "factor()", que são chamadas pelo programa principal.
+
+Para utilizar o analisador testando suas própias expressões o usuário deve alterar o caminho do arquivo txt presente no código para um arquivo do seu própio computador, após a escrita é necessário salvar as alterações no código para executá-lo. O caminho do arquivo está presente na main do projeto.
